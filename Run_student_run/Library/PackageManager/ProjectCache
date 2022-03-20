@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637832958059449150
-    m_Hash: 2989432480
+      ticks: 637833989298112369
+    m_Hash: 1210271494
   m_LockFileStatus:
     m_FilePath: C:/Users/dade0/OneDrive/Documenti/GitHub/a-wonderful-platform-game/Run_student_run/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637832958495381878
-    m_Hash: 1323924065
+      ticks: 637833989298122339
+    m_Hash: 2425293117
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
