@@ -17,9 +17,45 @@ public class SecondYearButton : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
-    // Update is called once per frame
-    void Update()
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    //MOVEMENT INSIDE LEVELS
+    public void GoToFirstLv()
     {
-        
+        SceneManager.LoadScene("2.1 Level");
     }
+
+    public void GoToSecondLv()
+    {
+        SceneManager.LoadScene("2.2 Level");
+    }
+
+    public void GoToThirdLv()
+    {
+        SceneManager.LoadScene("2.3 Level");
+    }
+
+    public void GoToFourthLv()
+    {
+        SceneManager.LoadScene("2.4 Level");
+    }
+
+    public void GoToFifthLv()
+    {
+        SceneManager.LoadScene("2.5 Level");
+    }
+    public void GoToSixthLv()
+    {
+        SceneManager.LoadScene("2.6 Level");
+    }
+
+    public void GoToSeventhLv()
+    {
+        SceneManager.LoadScene("2.7 Level");
+    }
+
+    public void GoToEighthLv()
+    {
+        SceneManager.LoadScene("2.8 Level");
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 }
