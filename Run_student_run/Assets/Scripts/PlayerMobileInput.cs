@@ -3,37 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMobileInput : MonoBehaviour, IAgentInput
+public class PlayerMobileInput : MonoBehaviour
 {
-    public Vector2 MovementVector { get; private set; }
+    private Rigidbody2D rb;
+    public Joystick joystick;
+    private float speedForce = 200f; 
 
-    public event Action OnAttack;
-    public event Action OnJumpPressed;
-    public event Action OnJumpReleased;
-    public event Action<Vector2> OnMovement;
-    public event Action OnWeaponChange;
+    private void Start(){
 
-    [SerializeField]
-    private MobileJoystick joystick;
-
-    private void Start()
-    {
-        joystick.OnMove += Move;
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Move(Vector2 input)
-    {
-        MovementVector = input;
-        OnMovement?.Invoke(MovementVector);
-    }
+    void Update(){
+       float HorizontalMove = joystick.Horizontal;
+       rb.velocity = new Vector2(HorizontalMove * speedForce, rb.velocity.y);
 
-    public void JumpPressed()
-    {
-        OnJumpPressed?.Invoke();
-    }
-
-    public void JumpReleased()
-    {
-        OnJumpReleased?.Invoke();
-    }
+       if(Input.GetButtonDown("Jump")){
+         rb.velocity = new Vector3(0,200,0);
+     }
+   }
 }
