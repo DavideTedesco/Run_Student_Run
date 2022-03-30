@@ -15,7 +15,8 @@ public class PlayerMobileInput : MonoBehaviour
     }
 
     void Update(){
-       float HorizontalMove = joystick.Horizontal;
+        joystick = FindObjectOfType<Joystick>();
+        float HorizontalMove = joystick.Horizontal;
        rb.velocity = new Vector2(HorizontalMove * speedForce, rb.velocity.y);
 
        if(Input.GetButtonDown("Jump")){
