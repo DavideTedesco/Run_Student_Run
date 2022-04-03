@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMobileInput : MonoBehaviour
 {
@@ -18,21 +19,24 @@ public class PlayerMobileInput : MonoBehaviour
         joystick = FindObjectOfType<Joystick>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+       
     }
 
+   
     void Update(){
        
         HorizontalMove = joystick.Horizontal;
         rb.velocity = new Vector2(HorizontalMove * speedForce, rb.velocity.y);
 
-        if(Input.GetButtonDown("Jump")){
-         rb.velocity = new Vector3(0,200,0);
+        if (Input.GetButtonDown("Jump"))
+        {
+            rb.velocity = new Vector2(0, 200);
         }
 
         updateAnimationState();
    }
 
-   private void updateAnimationState(){
+    private void updateAnimationState(){
         if(HorizontalMove > 0){
             anim.SetBool("running", true);
             sprite.flipX = false;
