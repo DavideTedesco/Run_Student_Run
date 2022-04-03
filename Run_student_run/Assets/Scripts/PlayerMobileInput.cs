@@ -14,6 +14,12 @@ public class PlayerMobileInput : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Books"))
+            Destroy(other.gameObject);
+    }
+
     void Update(){
         joystick = FindObjectOfType<Joystick>();
         float HorizontalMove = joystick.Horizontal;
