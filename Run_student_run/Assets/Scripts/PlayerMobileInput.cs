@@ -2,25 +2,66 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMobileInput : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public Joystick joystick;
+    private Joystick joystick;
+    private Animator anim; 
+    private SpriteRenderer sprite;
     private float speedForce = 200f; 
+    private float HorizontalMove = 0f;
+    private float VerticalMove = 0f;
+
 
     private void Start(){
 
         rb = GetComponent<Rigidbody2D>();
+        joystick = FindObjectOfType<Joystick>();
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+       
     }
 
+   
     void Update(){
-        joystick = FindObjectOfType<Joystick>();
-        float HorizontalMove = joystick.Horizontal;
-       rb.velocity = new Vector2(HorizontalMove * speedForce, rb.velocity.y);
+       
+        HorizontalMove = joystick.Horizontal;
+        rb.velocity = new Vector2(HorizontalMove * speedForce, rb.velocity.y);
+        VerticalMove = joystick.Vertical;
 
-       if(Input.GetButtonDown("Jump")){
-         rb.velocity = new Vector3(0,200,0);
-     }
+
+        if (VerticalMove > .8f)
+        {
+            rb.velocity = new Vector2(0, 150);
+        }
+
+        updateAnimationState();
    }
+
+    private void updateAnimationState(){
+        if(HorizontalMove > 0){
+            anim.SetBool("running", true);
+            sprite.flipX = false;
+        } 
+        else if(HorizontalMove < 0){
+            anim.SetBool("running", true);
+            sprite.flipX = true;
+        }
+        else{
+            anim.SetBool("running", false);
+        }
+
+        //if (VerticalMove > 0)
+        //{
+        //    anim.SetBool("jumping", true);
+        //    sprite.flipY = false;
+        //}
+       
+        //else
+        //{
+        //    anim.SetBool("standing", false);
+        //}
+    }
 }
