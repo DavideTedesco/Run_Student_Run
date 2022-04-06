@@ -8,7 +8,7 @@ public class ShareButton : MonoBehaviour
 
 	public void ClickShareButton()
     {
-		messageToShare = "Hi I'm playing with this fantastic game!! What are you waiting for? Download it!";
+		messageToShare = "Hi I'm playing with GAME_NAME!! What are you waiting for? Download it! <a href=\"https://davidetedesco.github.io/a-wonderful-platform-game-site\" > here</a>";
 		StartCoroutine(TakeScreenshotAndShare());
     }
 
