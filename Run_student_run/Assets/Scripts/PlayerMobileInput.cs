@@ -40,6 +40,12 @@ public class PlayerMobileInput : MonoBehaviour
         updateAnimationState();
    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Books"))
+            Destroy(other.gameObject);
+    }
+
     private void updateAnimationState(){
         if(HorizontalMove > 0){
             anim.SetBool("running", true);
