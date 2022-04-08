@@ -10,6 +10,7 @@ public class PlayerMobileInput : MonoBehaviour
     private Joystick joystick;
     private Animator anim; 
     private SpriteRenderer sprite;
+    private Button button;
     private float speedForce = 200f; 
     private float HorizontalMove = 0f;
     private float VerticalMove = 0f;
@@ -21,6 +22,7 @@ public class PlayerMobileInput : MonoBehaviour
         joystick = FindObjectOfType<Joystick>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        button = GetComponent<Button>();
        
     }
 
@@ -30,7 +32,7 @@ public class PlayerMobileInput : MonoBehaviour
         HorizontalMove = joystick.Horizontal;
         rb.velocity = new Vector2(HorizontalMove * speedForce, rb.velocity.y);
         VerticalMove = joystick.Vertical;
-
+        //button.onClick.AddListener(jump);
 
         if (VerticalMove > .8f)
         {
@@ -59,6 +61,7 @@ public class PlayerMobileInput : MonoBehaviour
             anim.SetBool("running", false);
         }
 
+
         //if (VerticalMove > 0)
         //{
         //    anim.SetBool("jumping", true);
@@ -69,5 +72,10 @@ public class PlayerMobileInput : MonoBehaviour
         //{
         //    anim.SetBool("standing", false);
         //}
+    }
+
+    public void jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, speedForce);
     }
 }
