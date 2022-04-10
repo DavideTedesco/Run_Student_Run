@@ -70,4 +70,9 @@ public class PlayerMobileInput : MonoBehaviour
         //    anim.SetBool("standing", false);
         //}
     }
+
+    public void jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, 200);
+    }
 }
