@@ -4072,7 +4072,6 @@ namespace PlayFab.ClientModels
         /// title has been selected.
         /// </summary>
         public string TitleId;
-
     }
 
     [Serializable]
@@ -5499,7 +5498,6 @@ namespace PlayFab.ClientModels
         /// PlayFab username for the account (3-20 characters)
         /// </summary>
         public string Username;
-
     }
 
     /// <summary>
