@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
+    public GameObject gameOverScreen;
 
     private void Awake()
     {
@@ -26,14 +27,10 @@ public class Health : MonoBehaviour
         }
         else
         {
-            if (!dead)
-            {
-                //TODO die animation
                 anim.SetTrigger("die");
                 GetComponent<PlayerMobileInput>().enabled = false;
                 dead = true;
-            }
-            
+                gameOverScreen.SetActive(true);
 
         }
 
