@@ -195,8 +195,13 @@ MonoBehaviour:
   m_MinSize: {x: 798, y: 342}
   m_MaxSize: {x: 12003, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 651
 --- !u!114 &9
+=======
+  controlID: 44
+--- !u!114 &6
+>>>>>>> origin/Latini_trash2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,8 +225,13 @@ MonoBehaviour:
   m_MinSize: {x: 798, y: 342}
   m_MaxSize: {x: 12003, y: 8042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 652
 --- !u!114 &10
+=======
+  controlID: 45
+--- !u!114 &7
+>>>>>>> origin/Latini_trash2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,8 +255,13 @@ MonoBehaviour:
   m_MinSize: {x: 523, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 653
 --- !u!114 &11
+=======
+  controlID: 46
+--- !u!114 &8
+>>>>>>> origin/Latini_trash2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,8 +285,13 @@ MonoBehaviour:
   m_MinSize: {x: 523, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 654
 --- !u!114 &12
+=======
+  controlID: 47
+--- !u!114 &9
+>>>>>>> origin/Latini_trash2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -288,9 +308,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 407
     height: 515
   m_MinSize: {x: 321, y: 21}
+=======
+    width: 352.8
+    height: 394.4
+  m_MinSize: {x: 201, y: 221}
+>>>>>>> origin/Latini_trash2
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
@@ -313,10 +339,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 407
     y: 0
     width: 734
     height: 515
+=======
+    x: 352.8
+    y: 0
+    width: 698.39996
+    height: 394.4
+>>>>>>> origin/Latini_trash2
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
@@ -425,10 +458,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 407
     y: 89
     width: 732
     height: 494
+=======
+    x: 352.80002
+    y: 73.6
+    width: 696.39996
+    height: 373.4
+>>>>>>> origin/Latini_trash2
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -471,17 +511,26 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
+<<<<<<< HEAD
       y: 21
       width: 732
       height: 473
     m_Scale: {x: 0.7625, y: 0.7625}
     m_Translation: {x: 366, y: 236.5}
+=======
+      y: 0
+      width: 696.39996
+      height: 373.4
+    m_Scale: {x: 0.4321759, y: 0.4321759}
+    m_Translation: {x: 348.19998, y: 186.7}
+>>>>>>> origin/Latini_trash2
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -480
       y: -310.16394
       width: 960
@@ -489,6 +538,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.7625
   m_LastWindowPixelSize: {x: 1464, y: 988}
+=======
+      x: -805.6904
+      y: -432
+      width: 1611.3809
+      height: 864
+    m_MinimalGUI: 1
+  m_defaultScale: 0.4321759
+  m_LastWindowPixelSize: {x: 870.49994, y: 466.75}
+>>>>>>> origin/Latini_trash2
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
@@ -515,30 +573,40 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 89
     width: 406
     height: 494
+=======
+    y: 73.6
+    width: 351.8
+    height: 373.4
+>>>>>>> origin/Latini_trash2
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 4ac8ffff
+=======
+      m_ExpandedIDs: a2f8ffff60fbffff2e470000
+>>>>>>> origin/Latini_trash2
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: PauseButton
+        m_OriginalName: PauseButton
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 18022
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 12}
       m_SearchString: 
@@ -593,10 +661,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 407
     y: 89
     width: 732
     height: 494
+=======
+    x: 352.80002
+    y: 73.6
+    width: 696.39996
+    height: 373.4
+>>>>>>> origin/Latini_trash2
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -609,9 +684,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 252.5129, y: 234.37152, z: -11.068919}
     speed: 2
     m_Value: {x: 252.5129, y: 234.37152, z: -11.068919}
+=======
+    m_Target: {x: 305.40604, y: 308.9132, z: -26.376942}
+    speed: 2
+    m_Value: {x: 318.06442, y: 314.5075, z: -25.237364}
+>>>>>>> origin/Latini_trash2
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -662,9 +743,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 414.78955
     speed: 2
     m_Value: 414.78955
+=======
+    m_Target: 264.63553
+    speed: 2
+    m_Value: 253.23975
+>>>>>>> origin/Latini_trash2
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -727,22 +814,37 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets
+=======
+    - Assets/Scripts
+>>>>>>> origin/Latini_trash2
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 68
   m_LastFolders:
+<<<<<<< HEAD
   - Assets
+=======
+  - Assets/Scripts
+>>>>>>> origin/Latini_trash2
   m_LastFoldersGridSize: 68
   m_LastProjectPath: /Users/Federico/github/a-wonderful-platform-game/Run_student_run
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: fc7a0000
     m_LastClickedID: 31484
     m_ExpandedIDs: 00000000f87a0000fa7a0000fc7a0000fe7a0000007b0000027b0000047b0000067b0000087b00000a7b00000c7b000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 100.600006}
+    m_SelectedIDs: d4490000
+    m_LastClickedID: 18900
+    m_ExpandedIDs: 00000000c2490000c4490000c6490000c8490000ca490000cc490000ce490000d0490000d2490000d4490000f449000000ca9a3b
+>>>>>>> origin/Latini_trash2
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -770,7 +872,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000f87a0000fa7a0000fc7a0000fe7a0000007b0000027b0000047b0000067b0000087b00000a7b00000c7b000000ca9a3b
+=======
+    m_ExpandedIDs: 00000000c2490000c4490000c6490000c8490000ca490000cc490000ce490000d0490000d2490000d4490000
+>>>>>>> origin/Latini_trash2
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

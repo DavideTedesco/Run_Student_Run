@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,7 @@ public class PlayerMobileInput : MonoBehaviour
     private float speedForce = 200f; 
     private float HorizontalMove = 0f;
     private float VerticalMove = 0f;
-
+    private GameObject pauseMenuScreen;
 
     private void Start(){
 
@@ -75,4 +76,21 @@ public class PlayerMobileInput : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, 200);
     }
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        pauseMenuScreen.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        pauseMenuScreen.SetActive(false);
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("AllYears");
+    }
+
 }

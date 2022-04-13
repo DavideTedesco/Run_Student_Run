@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/StartPage.unity
+=======
+- path: Assets/Scenes/1.3 Level.unity
+>>>>>>> origin/Latini_trash2
   isLoaded: 1
   isActive: 1
   isSubScene: 0
