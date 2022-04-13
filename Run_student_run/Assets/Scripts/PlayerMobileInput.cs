@@ -92,9 +92,24 @@ public class PlayerMobileInput : MonoBehaviour
         pauseButton.SetActive(true);
     }
 
+    public void ReplayGame()
+    {
+        Time.timeScale = 1;
+        pauseMenuPanel.SetActive(false);
+        pauseButton.SetActive(true);
+
+    }
+
     public void GoToMenu()
     {
         SceneManager.LoadScene("AllYears");
+    }
+
+    public void GoToLevel()
+    {
+        //Debug.Log(currentLevel.ToString());
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
 }
