@@ -5,26 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
       ticks: 637851799180000000
     m_Hash: 1892291929
-=======
-      ticks: 637849199456071690
-    m_Hash: 788962605
->>>>>>> origin/Latini_trash2
   m_LockFileStatus:
     m_FilePath: /Users/Federico/github/a-wonderful-platform-game/Run_student_run/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
       ticks: 637851799180000000
     m_Hash: 644855517
-=======
-      ticks: 637849199456081666
-    m_Hash: 2898854940
->>>>>>> origin/Latini_trash2
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

@@ -14,7 +14,8 @@ public class PlayerMobileInput : MonoBehaviour
     private float speedForce = 200f; 
     private float HorizontalMove = 0f;
     private float VerticalMove = 0f;
-    private GameObject pauseMenuScreen;
+    public GameObject pauseMenuPanel;
+    public GameObject pauseButton;
 
     private void Start(){
 
@@ -22,7 +23,7 @@ public class PlayerMobileInput : MonoBehaviour
         joystick = FindObjectOfType<Joystick>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-       
+        //pauseMenuPanel = GetComponent<GameObject>();
     }
 
    
@@ -76,16 +77,19 @@ public class PlayerMobileInput : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, 200);
     }
+
     public void PauseGame()
     {
         Time.timeScale = 0;
-        pauseMenuScreen.SetActive(true);
+        pauseMenuPanel.SetActive(true);
+        pauseButton.SetActive(false);
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        pauseMenuScreen.SetActive(false);
+        pauseMenuPanel.SetActive(false);
+        pauseButton.SetActive(true);
     }
 
     public void GoToMenu()
