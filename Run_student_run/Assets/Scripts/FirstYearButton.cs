@@ -20,7 +20,7 @@ public class FirstYearButton : MonoBehaviour
     //Use it to return on the start page
     public void RetStartPage()
     {
-        SceneManager.LoadScene("Start_Scene");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void GoToAuthors()
