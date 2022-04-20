@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 1119286631}
   - component: {fileID: 1119286630}
   m_Layer: 0
-  m_Name: PlayFabLogin
+  m_Name: PlayFabController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,6 +744,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loginPanel: {fileID: 1626120762}
+  playerLevel: 0
+  gameLevel: 0
+  playerHealth: 0
+  playerHighScore: 0
 --- !u!4 &1119286631
 Transform:
   m_ObjectHideFlags: 0
