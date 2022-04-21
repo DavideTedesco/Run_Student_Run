@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class PlayerMobileInput : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private BoxCollider2D coll;
+    [SerializeField] private LayerMask jumpableGround;
     private Joystick joystick;
     private Animator anim; 
     private SpriteRenderer sprite;
@@ -16,13 +18,15 @@ public class PlayerMobileInput : MonoBehaviour
     private float VerticalMove = 0f;
     public GameObject pauseMenuPanel;
     public GameObject pauseButton;
-    private 
 
-    enum MovementState{idle, runnig, jumping, falling};
+    private enum MovementState{idle, runnig, jumping, falling, doubleJump};
+
+    private int numberOfJump;
 
     private void Start(){
 
         rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
         joystick = FindObjectOfType<Joystick>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
@@ -67,9 +71,13 @@ public class PlayerMobileInput : MonoBehaviour
             state = MovementState.idle;
         }
 
-        if(rb.velocity.y > .001f)
+        if(rb.velocity.y > .001f && numberOfJump == 0)
         {
             state = MovementState.jumping;
+        }
+        else if(rb.velocity.y > .001f && numberOfJump == 1)
+        {
+            state = MovementState.doubleJump;
         }
         else if(rb.velocity.y < -.001f)
         {
@@ -82,7 +90,17 @@ public class PlayerMobileInput : MonoBehaviour
 
     public void jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, 200);
+        if(IsGrounded())
+        {
+            numberOfJump = 0;
+            rb.velocity = new Vector2(rb.velocity.x, 200);
+        }
+        else if(numberOfJump < 1)
+        {
+            numberOfJump++;
+            rb.velocity = new Vector2(rb.velocity.x, 300);
+        }
+            
     }
 
     public void PauseGame()
@@ -117,6 +135,11 @@ public class PlayerMobileInput : MonoBehaviour
         //Debug.Log(currentLevel.ToString());
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 
 }
