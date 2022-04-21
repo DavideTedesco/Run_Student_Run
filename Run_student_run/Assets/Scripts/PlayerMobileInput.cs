@@ -16,6 +16,9 @@ public class PlayerMobileInput : MonoBehaviour
     private float VerticalMove = 0f;
     public GameObject pauseMenuPanel;
     public GameObject pauseButton;
+    private 
+
+    enum MovementState{idle, runnig, jumping, falling};
 
     private void Start(){
 
@@ -49,28 +52,32 @@ public class PlayerMobileInput : MonoBehaviour
     }
 
     private void updateAnimationState(){
+
+        MovementState state;
+
         if(HorizontalMove > 0){
-            anim.SetBool("running", true);
+            state = MovementState.runnig;
             sprite.flipX = false;
         } 
         else if(HorizontalMove < 0){
-            anim.SetBool("running", true);
+            state = MovementState.runnig;
             sprite.flipX = true;
         }
         else{
-            anim.SetBool("running", false);
+            state = MovementState.idle;
         }
 
-        //if (VerticalMove > 0)
-        //{
-        //    anim.SetBool("jumping", true);
-        //    sprite.flipY = false;
-        //}
-       
-        //else
-        //{
-        //    anim.SetBool("standing", false);
-        //}
+        if(rb.velocity.y > .001f)
+        {
+            state = MovementState.jumping;
+        }
+        else if(rb.velocity.y < -.001f)
+        {
+            state = MovementState.falling;
+        }
+
+        anim.SetInteger("state",(int)state);
+        
     }
 
     public void jump()
