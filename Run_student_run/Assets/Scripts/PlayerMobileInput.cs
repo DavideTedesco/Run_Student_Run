@@ -18,7 +18,7 @@ public class PlayerMobileInput : MonoBehaviour
     private float VerticalMove = 0f;
     public GameObject pauseMenuPanel;
     public GameObject pauseButton;
-
+    
     private enum MovementState{idle, runnig, jumping, falling, doubleJump};
 
     private int numberOfJump;
@@ -140,6 +140,11 @@ public class PlayerMobileInput : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+    }
+
+    public void backToIdle()
+    {
+         anim.SetTrigger("idle");
     }
 
 }

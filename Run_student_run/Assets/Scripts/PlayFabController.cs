@@ -42,8 +42,8 @@
                         PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
                         if (PlayerPrefs.HasKey("EMAIL"))
                         {
-                            userEmail = PlayerPrefs.GetString("EMAIL");
-                            userPassword = PlayerPrefs.GetString("PASSWORD");
+                            //userEmail = PlayerPrefs.GetString("EMAIL");
+                            //userPassword = PlayerPrefs.GetString("PASSWORD");
                             var request1 = new LoginWithEmailAddressRequest { Email = userEmail, Password = userPassword };
                             PlayFabClientAPI.LoginWithEmailAddress(request1, OnLoginSuccess, OnLoginFailure);
                         }
