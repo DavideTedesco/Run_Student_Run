@@ -17,6 +17,7 @@ public class PlayerMobileInput : MonoBehaviour
     private float HorizontalMove = 0f;
     private float VerticalMove = 0f;
     public GameObject pauseMenuPanel;
+    public GameObject winPanel;
     public GameObject pauseButton;
     
     private enum MovementState{idle, runnig, jumping, falling, doubleJump};
@@ -53,6 +54,9 @@ public class PlayerMobileInput : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Books"))
             Destroy(other.gameObject);
+
+        if(other.gameObject.CompareTag("Verbale"))
+             Destroy(other.gameObject);
     }
 
     private void updateAnimationState(){
@@ -121,6 +125,14 @@ public class PlayerMobileInput : MonoBehaviour
     {
         Time.timeScale = 1;
         pauseMenuPanel.SetActive(false);
+        pauseButton.SetActive(true);
+
+    }
+
+    public void WinGame()
+    {
+        Time.timeScale = 1;
+        pauseMenuPanel.SetActive(true);
         pauseButton.SetActive(true);
 
     }
