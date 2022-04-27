@@ -38,17 +38,20 @@
                         {
                             PlayFabSettings.TitleId = "6487C"; // Please change this value to your own titleId from PlayFab Game Manager
                         }
-                        var request = new LoginWithCustomIDRequest { CustomId = "GettingStartedGuide", CreateAccount = true };
+                        var request = new LoginWithCustomIDRequest { CustomId = "LoginRequest", CreateAccount = true };
+                        //var requestWithoutPrefs = new LoginWithEmailAddressRequest { Email = userEmail, Password = userPassword };
+                        //PlayFabClientAPI.LoginWithEmailAddress(requestWithoutPrefs, OnLoginSuccess, OnLoginFailure);
                         PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
-                        if (PlayerPrefs.HasKey("EMAIL"))
+                        //Commentare l'if qui sotto per effettuare il login senza prefs
+                        /*if (PlayerPrefs.HasKey("EMAIL"))
                         {
                             userEmail = PlayerPrefs.GetString("EMAIL");
                             userPassword = PlayerPrefs.GetString("PASSWORD");
-                            var request1 = new LoginWithEmailAddressRequest { Email = userEmail, Password = userPassword };
-                            PlayFabClientAPI.LoginWithEmailAddress(request1, OnLoginSuccess, OnLoginFailure);
+                            var requestWithPrefs = new LoginWithEmailAddressRequest { Email = userEmail, Password = userPassword };
+                            PlayFabClientAPI.LoginWithEmailAddress(requestWithPrefs, OnLoginSuccess, OnLoginFailure);
                         }
                         //ANONYMOUS LOGIN
-                        //TODO
+                        //TODO*/
                     }
 
                     public void StartGame()
