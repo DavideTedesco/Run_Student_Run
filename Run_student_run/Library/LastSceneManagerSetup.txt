@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/1.4 Level.unity
-=======
-- path: Assets/Scenes/MainScene.unity
->>>>>>> main
+- path: Assets/Scenes/FirstYear.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
