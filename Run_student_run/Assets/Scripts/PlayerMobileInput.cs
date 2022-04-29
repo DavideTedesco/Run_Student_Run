@@ -17,8 +17,10 @@ public class PlayerMobileInput : MonoBehaviour
     private float HorizontalMove = 0f;
     private float VerticalMove = 0f;
     public GameObject pauseMenuPanel;
+    public GameObject fixedJoystick;
     public GameObject winPanel;
     public GameObject pauseButton;
+    public GameObject jumpButton;
     
     private enum MovementState{idle, runnig, jumping, falling, doubleJump};
 
@@ -111,6 +113,8 @@ public class PlayerMobileInput : MonoBehaviour
     {
         Time.timeScale = 0;
         pauseMenuPanel.SetActive(true);
+        fixedJoystick.SetActive(false);
+        jumpButton.SetActive(false);
         pauseButton.SetActive(false);
     }
 
@@ -118,6 +122,8 @@ public class PlayerMobileInput : MonoBehaviour
     {
         Time.timeScale = 1;
         pauseMenuPanel.SetActive(false);
+        fixedJoystick.SetActive(true);
+        jumpButton.SetActive(true);
         pauseButton.SetActive(true);
     }
 
@@ -125,6 +131,8 @@ public class PlayerMobileInput : MonoBehaviour
     {
         Time.timeScale = 1;
         pauseMenuPanel.SetActive(false);
+        fixedJoystick.SetActive(true);
+        jumpButton.SetActive(true);
         pauseButton.SetActive(true);
 
     }
