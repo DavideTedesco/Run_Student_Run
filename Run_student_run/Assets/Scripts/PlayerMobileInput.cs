@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerMobileInput : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D coll;
+    private CompositeCollider2D coll;
     [SerializeField] private LayerMask jumpableGround;
     private Joystick joystick;
     private Animator anim; 
@@ -29,7 +29,7 @@ public class PlayerMobileInput : MonoBehaviour
     private void Start(){
 
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<BoxCollider2D>();
+        coll = GetComponent<CompositeCollider2D>();
         joystick = FindObjectOfType<Joystick>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
