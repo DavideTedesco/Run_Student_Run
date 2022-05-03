@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerMobileInput : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private CompositeCollider2D coll;
+    private PolygonCollider2D coll;
     [SerializeField] private LayerMask jumpableGround;
     private Joystick joystick;
     private Animator anim; 
@@ -29,11 +29,12 @@ public class PlayerMobileInput : MonoBehaviour
     private void Start(){
 
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<CompositeCollider2D>();
+        coll = GetComponent<PolygonCollider2D>();
         joystick = FindObjectOfType<Joystick>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         //pauseMenuPanel = GetComponent<GameObject>();
+        
     }
 
    
@@ -41,7 +42,7 @@ public class PlayerMobileInput : MonoBehaviour
        
         HorizontalMove = joystick.Horizontal;
         rb.velocity = new Vector2(HorizontalMove * speedForce, rb.velocity.y);
-        VerticalMove = joystick.Vertical;
+        //VerticalMove = joystick.Vertical;
 
 
         if (VerticalMove > .8f)
@@ -67,11 +68,13 @@ public class PlayerMobileInput : MonoBehaviour
 
         if(HorizontalMove > 0){
             state = MovementState.runnig;
-            sprite.flipX = false;
+            //sprite.flipX = false;
+            transform.localScale = new Vector2(22.76f ,25.46f);
         } 
         else if(HorizontalMove < 0){
             state = MovementState.runnig;
-            sprite.flipX = true;
+            //sprite.flipX = true;
+            transform.localScale = new Vector2(-22.76f ,25.46f);
         }
         else{
             state = MovementState.idle;
