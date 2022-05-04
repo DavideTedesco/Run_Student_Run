@@ -1,6 +1,7 @@
                 using PlayFab;
                 using PlayFab.ClientModels;
-                using UnityEngine;
+using PlayFab.PfEditor.Json;
+using UnityEngine;
                 using UnityEngine.SceneManagement;
 
                 public class PlayFabController : MonoBehaviour
@@ -124,7 +125,8 @@
 
                     public int playerLevel;
                     public int gameLevel;
-                    public float playerHealth;
+                    //downcast not possible for the StatisticUpdate, playerHealth must be an int
+                    public int playerHealth;
                     public int booksCounter;
                     public int playerHighScore;
 
@@ -138,8 +140,7 @@
                             Statistics = new System.Collections.Generic.List<StatisticUpdate> {
                                 new StatisticUpdate { StatisticName = "PlayerLevel", Value = playerLevel },
                                 new StatisticUpdate { StatisticName = "GameLevel", Value = gameLevel },
-                                //downcast for the StatisticUpdate maybe not correct TODO
-                                new StatisticUpdate { StatisticName = "PlayerHealth", Value = (int)playerHealth },
+                                new StatisticUpdate { StatisticName = "PlayerHealth", Value = playerHealth },
                                 new StatisticUpdate { StatisticName = "BooksCounter", Value = booksCounter },
                                 new StatisticUpdate { StatisticName = "PlayerHighScore", Value = playerHighScore },
 
@@ -184,5 +185,32 @@
                         }
                     }
                 }
-        #endregion PlayerStats
+
+    // Build the request object and access the API
+    public  void StartCloudUpdatePlayerStats()
+    {
+        PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
+        {
+            FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
+            FunctionParameter = new { PlayerLevel = playerLevel, GameLevel = gameLevel, PlayerHealth = playerHealth, BooksCounter = booksCounter, PlayerHighScore = playerHighScore}, // The parameter provided to your function
+            GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
+        }, OnCloudUpdateStats, OnErrorShared);
     }
+    // OnCloudHelloWorld defined in the next code block
+
+    private static void OnCloudUpdateStats(ExecuteCloudScriptResult result)
+    {
+        // CloudScript (Legacy) returns arbitrary results, so you have to evaluate them one step and one parameter at a time
+        Debug.Log(JsonWrapper.SerializeObject(result.FunctionResult));
+        //JsonObject jsonResult = (JsonObject)result.FunctionResult;
+        //object messageValue;
+        //jsonResult.TryGetValue("messageValue", out messageValue); // note how "messageValue" directly corresponds to the JSON values set in CloudScript (Legacy)
+        //Debug.Log((string)messageValue);
+    }
+
+    private static void OnErrorShared(PlayFabError error)
+    {
+        Debug.Log(error.GenerateErrorReport());
+    }
+    #endregion PlayerStats
+}
