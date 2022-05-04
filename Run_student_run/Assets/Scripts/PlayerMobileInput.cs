@@ -8,7 +8,9 @@ using UnityEngine.UI;
 public class PlayerMobileInput : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private PolygonCollider2D coll;
+    //custom polygon collider
+    //private PolygonCollider2D coll;
+    private BoxCollider2D coll;
     [SerializeField] private LayerMask jumpableGround;
     private Joystick joystick;
     private Animator anim; 
@@ -29,7 +31,9 @@ public class PlayerMobileInput : MonoBehaviour
     private void Start(){
 
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<PolygonCollider2D>();
+        //custom polygon collider
+        //coll = GetComponent<PolygonCollider2D>();
+        coll = GetComponent<BoxCollider2D>();
         joystick = FindObjectOfType<Joystick>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
