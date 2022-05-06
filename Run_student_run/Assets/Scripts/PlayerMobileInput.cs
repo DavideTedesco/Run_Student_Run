@@ -147,8 +147,8 @@ public class PlayerMobileInput : MonoBehaviour
     public void WinGame()
     {
         Time.timeScale = 1;
-        pauseMenuPanel.SetActive(true);
-        pauseButton.SetActive(true);
+        winPanel.SetActive(true);
+        pauseButton.SetActive(false);
 
     }
 
