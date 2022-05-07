@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1680
     height: 991
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1680
     height: 991
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 7009
+  controlID: 5654
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 7010
+  controlID: 5655
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 7011
+  controlID: 5656
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -316,9 +316,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1225.0167, y: 750.85065, z: -6847.198}
+    m_Target: {x: 960, y: 843.03503, z: 0}
     speed: 2
-    m_Value: {x: 1225.0167, y: 750.85065, z: -6847.198}
+    m_Value: {x: 960, y: 843.03503, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -369,9 +369,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 958.65625
+    m_Target: 304.49973
     speed: 2
-    m_Value: 958.65625
+    m_Value: 304.4998
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -424,23 +424,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c03c0100
-      m_LastClickedID: 81088
-      m_ExpandedIDs: 74b2ffff6eb8ffff3cb9ffffbeb9ffffaabcffff50bdffff50cfffff78cfffffaccfffff30d0ffff5ed0ffff76d1ffffc0d1ffff32d2ffff7cd2ffffccd2ffff2cd4ffff50d4ffff6ed4ffff94d5ffffaed5ffffecd6ffff04d7ffff66dfffffc0dfffffecdfffff92f5ffff40f8ffffa8f8ffff16faffff60fbffff48450000ae450000587300000e740000328000006481000076810000a081000078b2000060b5000090e60000d6f900008e010100e4010100ee010100641c0100de1c0100ba2601002a27010034270100942b0100422c0100f03b01006a3c0100
+      m_SelectedIDs: b6e8ffff
+      m_LastClickedID: -5962
+      m_ExpandedIDs: 66ebfffff6edffff04f1ffff20f1ffff84f6ffff3cf7ffff42f7ffff50f7ffff60fbffff3e59000064590000825900009459000098590000fa590000146f00003c6f0000486f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: LeaderboardListing
+        m_OriginalName: LeaderboardListing
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -5962
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -541,23 +541,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 970
-      height: 515.5
-    m_Scale: {x: 0.9546296, y: 0.9546296}
-    m_Translation: {x: 485, y: 257.75}
+      height: 536.5
+    m_Scale: {x: 0.99351853, y: 0.99351853}
+    m_Translation: {x: 485, y: 268.25}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -508.05045
+      x: -488.16403
       y: -270
-      width: 1016.1009
+      width: 976.32806
       height: 540
     m_MinimalGUI: 1
-  m_defaultScale: 0.9546296
+  m_defaultScale: 0.99351853
   m_LastWindowPixelSize: {x: 1940, y: 1073}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -602,22 +602,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/PlayFabEditorExtensions/Editor/UI/Fonts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/PlayFabEditorExtensions/Editor/UI/Fonts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/Federico/github/a-wonderful-platform-game/Run_student_run
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 153.5}
-    m_SelectedIDs: c4460000
-    m_LastClickedID: 18116
-    m_ExpandedIDs: 000000002c4600002e46000030460000324600003446000036460000384600003a4600003c4600003e46000042460000444600004646000000ca9a3b
+    scrollPos: {x: 0, y: 61.5}
+    m_SelectedIDs: 5e540000
+    m_LastClickedID: 21598
+    m_ExpandedIDs: 00000000bc470000be470000c0470000c2470000c4470000c6470000c8470000ca470000cc470000ce470000d0470000d2470000f04700004e54000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -645,7 +645,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c4600002e46000030460000324600003446000036460000384600003a4600003c4600003e460000424600004446000000ca9a3b
+    m_ExpandedIDs: 00000000bc470000be470000c0470000c2470000c4470000c6470000c8470000ca470000cc470000ce470000d0470000d247000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -673,7 +673,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000072610000000000008a460000
+    m_ExpandedInstanceIDs: c6230000726100008a46000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -80,13 +80,19 @@ using UnityEngine;
                         Debug.Log("Congratulations, you made your first successful API call!");
                         PlayerPrefs.SetString("EMAIL", userEmail);
                         PlayerPrefs.SetString("PASSWORD", userPassword);
+                        PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest { DisplayName = username},OnDisplayName, OnLoginFailure );
                         //loginPanel.SetActive(false);
                         //SceneManager.LoadScene("MainScene");
+                        GetStats();
                         loginPage.SetActive(false);
                         mainPage.SetActive(true);
-                        GetStats();
 
                     }
+
+                    void OnDisplayName(UpdateUserTitleDisplayNameResult result)
+                    {
+                        Debug.Log(result.DisplayName + " is your new display name!");
+                       }
 
                     private void OnLoginFailure(PlayFabError error)
                     {
@@ -213,4 +219,27 @@ using UnityEngine;
         Debug.Log(error.GenerateErrorReport());
     }
     #endregion PlayerStats
+
+    #region LeaderBoard
+    public void GetLeaderBoard()
+    {
+        var requestLeaderBoard = new GetLeaderboardRequest { StartPosition = 0, StatisticName = "PlayerHighScore", MaxResultsCount = 20};
+        PlayFabClientAPI.GetLeaderboard(requestLeaderBoard, OnGetLeaderBoard, OnErrorLeaderBoard );
+    }
+
+    public void OnGetLeaderBoard(GetLeaderboardResult result)
+    {
+        //Debug.Log(result.Leaderboard[0].StatValue);
+        foreach (PlayerLeaderboardEntry player in result.Leaderboard)
+        {
+            Debug.Log(player.DisplayName + ": " + player.StatValue);
+        }
+
+    }
+
+    public void OnErrorLeaderBoard(PlayFabError error)
+    {
+        Debug.LogError(error.GenerateErrorReport());
+    }
+    #endregion LeaderBoard
 }
