@@ -220,6 +220,10 @@ using UnityEngine;
     }
     #endregion PlayerStats
 
+    public GameObject leaderboardPanel;
+    public GameObject listingPrefab;
+    public Transform listingContainer;
+
     #region LeaderBoard
     public void GetLeaderBoard()
     {
@@ -229,14 +233,31 @@ using UnityEngine;
 
     public void OnGetLeaderBoard(GetLeaderboardResult result)
     {
+        leaderboardPanel.SetActive(true);
+        mainPage.SetActive(false);
         //Debug.Log(result.Leaderboard[0].StatValue);
         foreach (PlayerLeaderboardEntry player in result.Leaderboard)
         {
+            GameObject tempListing = Instantiate(listingPrefab, listingContainer);
+            LeaderboardListing LL = tempListing.GetComponent<LeaderboardListing>();
+            LL.playerNameText.text = player.DisplayName;
+            LL.playerScoreText.text = player.StatValue.ToString();
             Debug.Log(player.DisplayName + ": " + player.StatValue);
         }
 
     }
 
+    public void CloseLeaderboardPanel()
+    {
+
+        leaderboardPanel.SetActive(false);
+        mainPage.SetActive(true);
+
+        for (int i = listingContainer.childCount - 1; i>=0; i--)
+        {
+            Destroy(listingContainer.GetChild(i).gameObject);
+        }
+    }
     public void OnErrorLeaderBoard(PlayFabError error)
     {
         Debug.LogError(error.GenerateErrorReport());
