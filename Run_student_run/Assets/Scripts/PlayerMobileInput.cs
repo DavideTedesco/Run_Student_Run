@@ -174,4 +174,35 @@ public class PlayerMobileInput : MonoBehaviour
          anim.SetTrigger("idle");
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    //MOVEMENT INSIDE LEVELS
+    //First Year
+    public void GoToFirstFirstLv()
+    {
+        SceneManager.LoadScene("1.1 Level");
+    }
+
+    public void GoToFirstSecondLv()
+    {
+        SceneManager.LoadScene("1.2 Level");
+    }
+
+    public void GoToFirstThirdLv()
+    {
+        SceneManager.LoadScene("1.3 Level");
+    }
+
+    public void GoToFirstFourthLv()
+    {
+        SceneManager.LoadScene("1.4 Level");
+    }
+
+    public void GoToFirstFifthLv()
+    {
+        SceneManager.LoadScene("1.5 Level");
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 }

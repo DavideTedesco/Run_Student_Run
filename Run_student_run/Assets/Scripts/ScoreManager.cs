@@ -22,4 +22,10 @@ public class ScoreManager : MonoBehaviour
         score += bookValue;
         text.text = "X" + score.ToString();
     }
+
+    public int getScore()
+    {
+        return this.score;
+    }
 }
+

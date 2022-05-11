@@ -1541,6 +1541,7 @@ m_PackageAssets:
         - 0.1.19-preview
         - 1.0.0
         - 2.0.0
+        - 2.0.1
         compatible:
         - 0.1.5-preview
         - 0.1.6-preview
@@ -1558,6 +1559,7 @@ m_PackageAssets:
         - 0.1.19-preview
         - 1.0.0
         - 2.0.0
+        - 2.0.1
         verified: 
       dependencies:
       - name: com.unity.sysroot
@@ -1632,6 +1634,7 @@ m_PackageAssets:
         - 0.1.21-preview
         - 1.0.0
         - 2.0.0
+        - 2.0.1
         compatible:
         - 0.1.4-preview
         - 0.1.5-preview
@@ -1652,6 +1655,7 @@ m_PackageAssets:
         - 0.1.21-preview
         - 1.0.0
         - 2.0.0
+        - 2.0.1
         verified: 
       dependencies:
       - name: com.unity.sysroot
@@ -3528,6 +3532,7 @@ m_PackageAssets:
         - 0.1.19-preview
         - 1.0.0
         - 2.0.0
+        - 2.0.2
         compatible:
         - 0.1.7-preview
         - 0.1.8-preview
@@ -3543,6 +3548,7 @@ m_PackageAssets:
         - 0.1.19-preview
         - 1.0.0
         - 2.0.0
+        - 2.0.2
         verified: 
       dependencies: []
       resolvedDependencies: []
@@ -3602,6 +3608,7 @@ m_PackageAssets:
         - 0.1.15-preview
         - 1.0.0
         - 2.0.0
+        - 2.0.1
         compatible:
         - 0.1.6-preview
         - 0.1.7-preview
@@ -3615,6 +3622,7 @@ m_PackageAssets:
         - 0.1.15-preview
         - 1.0.0
         - 2.0.0
+        - 2.0.1
         verified: 
       dependencies:
       - name: com.unity.sysroot
