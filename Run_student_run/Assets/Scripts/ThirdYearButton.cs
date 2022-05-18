@@ -18,6 +18,11 @@ public class ThirdYearButton : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //MOVEMENT INSIDE LEVELS
+    public void GoToThirdYear()
+    {
+        SceneManager.LoadScene("ThirdYear");
+    }
+    //Third Year
     public void GoToFirstLv()
     {
         SceneManager.LoadScene("3.1 Level");
@@ -57,5 +62,8 @@ public class ThirdYearButton : MonoBehaviour
         SceneManager.LoadScene("3.8 Level");
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-
+    public void GoToFinalExam()
+    {
+        SceneManager.LoadScene("FinalExam");
+    }
 }
