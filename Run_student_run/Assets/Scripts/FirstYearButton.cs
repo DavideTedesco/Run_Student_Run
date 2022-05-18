@@ -39,6 +39,11 @@ public class FirstYearButton : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //MOVEMENT INSIDE LEVELS
+    public void GoToFirstYear()
+    {
+        SceneManager.LoadScene("FirstYear");
+    }
+
     //First Year
     public void GoToFirstFirstLv()
     {
