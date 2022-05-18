@@ -1,7 +1,7 @@
 using PlayFab;
 using PlayFab.ClientModels;
 //da commentare per build
-using PlayFab.PfEditor.Json;
+//using PlayFab.PfEditor.Json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -210,7 +210,7 @@ private static void OnCloudUpdateStats(ExecuteCloudScriptResult result)
 // CloudScript (Legacy) returns arbitrary results, so you have to evaluate them one step and one parameter at a time
 
 //da commentare per build TODO
-Debug.Log(JsonWrapper.SerializeObject(result.FunctionResult));
+//Debug.Log(JsonWrapper.SerializeObject(result.FunctionResult));
 
 //JsonObject jsonResult = (JsonObject)result.FunctionResult;
 //object messageValue;
