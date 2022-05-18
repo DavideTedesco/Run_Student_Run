@@ -19,6 +19,11 @@ public class SecondYearButton : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //MOVEMENT INSIDE LEVELS
+    public void GoToSecondYear()
+    {
+        SceneManager.LoadScene("SecondYear");
+    }
+    //Second Year
     public void GoToFirstLv()
     {
         SceneManager.LoadScene("2.1 Level");

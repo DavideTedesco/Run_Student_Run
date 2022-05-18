@@ -39,44 +39,38 @@ public class FirstYearButton : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //MOVEMENT INSIDE LEVELS
-    public void GoToFirstLv()
+    public void GoToFirstYear()
+    {
+        SceneManager.LoadScene("FirstYear");
+    }
+
+    //First Year
+    public void GoToFirstFirstLv()
     {
         SceneManager.LoadScene("1.1 Level");
     }
 
-    public void GoToSecondLv()
+    public void GoToFirstSecondLv()
     {
         SceneManager.LoadScene("1.2 Level");
     }
 
-    public void GoToThirdLv()
+    public void GoToFirstThirdLv()
     {
         SceneManager.LoadScene("1.3 Level");
     }
 
-    public void GoToFourthLv()
+    public void GoToFirstFourthLv()
     {
         SceneManager.LoadScene("1.4 Level");
     }
 
-    public void GoToFifthLv()
+    public void GoToFirstFifthLv()
     {
         SceneManager.LoadScene("1.5 Level");
     }
-    public void GoToSixthLv()
-    {
-        SceneManager.LoadScene("1.6 Level");
-    }
 
-    public void GoToSeventhLv()
-    {
-        SceneManager.LoadScene("1.7 Level");
-    }
 
-    public void GoToEighthLv()
-    {
-        SceneManager.LoadScene("1.8 Level");
-    }
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }
