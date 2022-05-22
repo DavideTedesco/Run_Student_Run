@@ -7,12 +7,17 @@ public class EnemyAgro : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] private float agroRange;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private LayerMask killer;
+    private Animator anim;
+    private BoxCollider2D collider;
     private Rigidbody2D enemy;
 
     // Start is called before the first frame update
     void Start()
     {
      enemy = GetComponent<Rigidbody2D>();   
+     collider = GetComponent<BoxCollider2D>();
+      anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,9 +32,15 @@ public class EnemyAgro : MonoBehaviour
             Chase();
         }
         else//spop chasing player
-        
+        {
             StopChasing();
-        
+        }
+
+        if(BeingKilled())
+        {
+            anim.SetBool("death", true);
+        }
+        Debug.Log(BeingKilled());
     }
 
     private void Chase()
@@ -52,4 +63,8 @@ public class EnemyAgro : MonoBehaviour
         enemy.velocity = new Vector2(0, 0);
     }
 
+    private bool BeingKilled()
+    {
+        return Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.up, .1f, killer);
+    }
 }
