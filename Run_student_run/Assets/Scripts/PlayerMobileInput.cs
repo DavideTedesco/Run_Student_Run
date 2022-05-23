@@ -177,7 +177,7 @@ public class PlayerMobileInput : MonoBehaviour
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //MOVEMENT INSIDE LEVELS
     //First Year
-    public void GoToFirstFirstLv()
+    /*public void GoToFirstFirstLv()
     {
         SceneManager.LoadScene("1.1 Level");
     }
@@ -200,7 +200,7 @@ public class PlayerMobileInput : MonoBehaviour
     public void GoToFirstFifthLv()
     {
         SceneManager.LoadScene("1.5 Level");
-    }
+    }*/
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
