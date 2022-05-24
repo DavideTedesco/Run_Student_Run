@@ -8,6 +8,7 @@ public class EnemyAgro : MonoBehaviour
     [SerializeField] private float agroRange;
     [SerializeField] private float moveSpeed;
     [SerializeField] private LayerMask killer;
+    [SerializeField] private GameObject damagePoint;
     private Animator anim;
     private BoxCollider2D collider;
     private Rigidbody2D enemy;
@@ -41,7 +42,9 @@ public class EnemyAgro : MonoBehaviour
         if(BeingKilled())
         {
             anim.SetBool("death", true);
-           Destroy(objEnemy);
+            Destroy(damagePoint);
+            Destroy(objEnemy);
+
         }
         //Debug.Log(BeingKilled());
     }

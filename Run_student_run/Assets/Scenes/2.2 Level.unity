@@ -3769,13 +3769,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645348758}
-  m_LocalRotation: {x: 0.0032899445, y: 0, z: 0, w: 0.9999946}
-  m_LocalPosition: {x: 217, y: 171, z: -1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 270, y: 171, z: -1}
   m_LocalScale: {x: 22.76952, y: 25.462875, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0.377, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &645348760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122070,6 +122070,10 @@ MonoBehaviour:
   player: {fileID: 645348759}
   agroRange: 0
   moveSpeed: 150
+  killer:
+    serializedVersion: 2
+    m_Bits: 0
+  damagePoint: {fileID: 0}
 --- !u!61 &1884031647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122176,7 +122180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884031645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 393.5, y: 220.39044, z: 0}
+  m_LocalPosition: {x: 690.7, y: 183.6, z: 0}
   m_LocalScale: {x: 22, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

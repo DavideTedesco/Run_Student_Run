@@ -114574,6 +114574,7 @@ MonoBehaviour:
   killer:
     serializedVersion: 2
     m_Bits: 128
+  damagePoint: {fileID: 1987561344}
 --- !u!95 &694242273
 Animator:
   serializedVersion: 3
