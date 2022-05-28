@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class PlayerMobileInput : MonoBehaviour
 {
     private Rigidbody2D rb;
+    //custom polygon collider
+    //private PolygonCollider2D coll;
     private BoxCollider2D coll;
     [SerializeField] private LayerMask jumpableGround;
     private Joystick joystick;
@@ -29,11 +31,14 @@ public class PlayerMobileInput : MonoBehaviour
     private void Start(){
 
         rb = GetComponent<Rigidbody2D>();
+        //custom polygon collider
+        //coll = GetComponent<PolygonCollider2D>();
         coll = GetComponent<BoxCollider2D>();
         joystick = FindObjectOfType<Joystick>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         //pauseMenuPanel = GetComponent<GameObject>();
+        
     }
 
    
@@ -41,7 +46,7 @@ public class PlayerMobileInput : MonoBehaviour
        
         HorizontalMove = joystick.Horizontal;
         rb.velocity = new Vector2(HorizontalMove * speedForce, rb.velocity.y);
-        VerticalMove = joystick.Vertical;
+        //VerticalMove = joystick.Vertical;
 
 
         if (VerticalMove > .8f)
@@ -67,11 +72,13 @@ public class PlayerMobileInput : MonoBehaviour
 
         if(HorizontalMove > 0){
             state = MovementState.runnig;
-            sprite.flipX = false;
+            //sprite.flipX = false;
+            transform.localScale = new Vector2(22.76f ,25.46f);
         } 
         else if(HorizontalMove < 0){
             state = MovementState.runnig;
-            sprite.flipX = true;
+            //sprite.flipX = true;
+            transform.localScale = new Vector2(-22.76f ,25.46f);
         }
         else{
             state = MovementState.idle;
@@ -140,8 +147,8 @@ public class PlayerMobileInput : MonoBehaviour
     public void WinGame()
     {
         Time.timeScale = 1;
-        pauseMenuPanel.SetActive(true);
-        pauseButton.SetActive(true);
+        winPanel.SetActive(true);
+        pauseButton.SetActive(false);
 
     }
 
@@ -166,5 +173,36 @@ public class PlayerMobileInput : MonoBehaviour
     {
          anim.SetTrigger("idle");
     }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    //MOVEMENT INSIDE LEVELS
+    //First Year
+    /*public void GoToFirstFirstLv()
+    {
+        SceneManager.LoadScene("1.1 Level");
+    }
+
+    public void GoToFirstSecondLv()
+    {
+        SceneManager.LoadScene("1.2 Level");
+    }
+
+    public void GoToFirstThirdLv()
+    {
+        SceneManager.LoadScene("1.3 Level");
+    }
+
+    public void GoToFirstFourthLv()
+    {
+        SceneManager.LoadScene("1.4 Level");
+    }
+
+    public void GoToFirstFifthLv()
+    {
+        SceneManager.LoadScene("1.5 Level");
+    }*/
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }
