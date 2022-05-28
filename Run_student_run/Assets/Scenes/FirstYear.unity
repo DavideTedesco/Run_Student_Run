@@ -433,7 +433,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 578090945}
         m_TargetAssemblyTypeName: FirstYearButton, Assembly-CSharp
-        m_MethodName: GoToFifthLv
+        m_MethodName: GoToFirstFifthLv
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -808,7 +808,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 804090711}
         m_TargetAssemblyTypeName: FirstYearButton, Assembly-CSharp
-        m_MethodName: GoToThirdLv
+        m_MethodName: GoToFirstThirdLv
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -954,7 +954,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 835750065}
         m_TargetAssemblyTypeName: FirstYearButton, Assembly-CSharp
-        m_MethodName: GoToFourthLv
+        m_MethodName: GoToFirstFourthLv
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1100,7 +1100,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 852365918}
         m_TargetAssemblyTypeName: FirstYearButton, Assembly-CSharp
-        m_MethodName: GoToFirstLv
+        m_MethodName: GoToFirstFirstLv
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1246,7 +1246,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939124404}
         m_TargetAssemblyTypeName: FirstYearButton, Assembly-CSharp
-        m_MethodName: GoToSecondLv
+        m_MethodName: GoToFirstSecondLv
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

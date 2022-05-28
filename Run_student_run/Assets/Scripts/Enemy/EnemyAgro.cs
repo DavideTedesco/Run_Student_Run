@@ -7,12 +7,20 @@ public class EnemyAgro : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] private float agroRange;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private LayerMask killer;
+    [SerializeField] private GameObject damagePoint;
+    private Animator anim;
+    private BoxCollider2D collider;
     private Rigidbody2D enemy;
+    private GameObject objEnemy;
 
     // Start is called before the first frame update
     void Start()
     {
      enemy = GetComponent<Rigidbody2D>();   
+     collider = GetComponent<BoxCollider2D>();
+      anim = GetComponent<Animator>();
+      objEnemy = GetComponent<GameObject>();
     }
 
     // Update is called once per frame
@@ -20,17 +28,27 @@ public class EnemyAgro : MonoBehaviour
     {
         //distance from the player
         float dist2Player = (Mathf.Abs(transform.position.x-player.position.x));
-        Debug.Log("distanza: "+ dist2Player);
+        //Debug.Log("distanza: "+ dist2Player);
 
         if(dist2Player < agroRange && dist2Player > 24.30f)//chase the player
         {
             Chase();
         }
-        else//spop chasing player
-        
+        else//stop chasing player
+        {
             StopChasing();
-        
+        }
+
+        if(BeingKilled())
+        {
+            anim.SetBool("death", true);
+            Destroy(damagePoint);
+            Destroy(objEnemy);
+
+        }
+        //Debug.Log(BeingKilled());
     }
+
 
     private void Chase()
     {
@@ -52,4 +70,8 @@ public class EnemyAgro : MonoBehaviour
         enemy.velocity = new Vector2(0, 0);
     }
 
+    private bool BeingKilled()
+    {
+        return Physics2D.BoxCast(collider.bounds.center, collider.bounds.size , 0f, Vector2.up, .1f, killer);
+    }
 }
