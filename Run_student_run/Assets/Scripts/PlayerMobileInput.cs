@@ -101,15 +101,30 @@ public class PlayerMobileInput : MonoBehaviour
         
     }
 
+    public AudioSource jumpSound;
+
+    public void PlayJump()
+    {
+        jumpSound.Play();
+    }
+
+    public AudioSource jumpSoundDouble;
+
+    public void PlayJumpDouble()
+    {
+        jumpSoundDouble.Play();
+    }
     public void jump()
     {
         if(IsGrounded())
         {
+            PlayJump();
             numberOfJump = 0;
             rb.velocity = new Vector2(rb.velocity.x, 200);
         }
         else if(numberOfJump < 1)
         {
+            PlayJumpDouble();
             numberOfJump++;
             rb.velocity = new Vector2(rb.velocity.x, 300);
         }
