@@ -35,7 +35,7 @@ public class PendoEnemy : MonoBehaviour
             }
         
 
-        if(IsHittingWall())
+        if(IsHittingWall() || OnTheEdge())
         {
             if(facingDirection == LEFT)
             {
@@ -87,6 +87,27 @@ public class PendoEnemy : MonoBehaviour
         else
         {
             val = false;
+        }
+
+        return val;
+    }
+
+    private bool OnTheEdge()
+    {
+        bool val = true;
+        float castDist = baseCastDistance;
+
+        Vector3 targetPos = castpos.position;
+        targetPos.y -= castDist;
+
+        Debug.DrawLine(castpos.position, targetPos, Color.blue);
+        if(Physics2D.Linecast(castpos.position, targetPos, 1 << LayerMask.NameToLayer("Ground")))
+        {
+            val = false;
+        }
+        else
+        {
+            val = true;
         }
 
         return val;
