@@ -7,20 +7,20 @@ public class EnemyAgro : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] private float agroRange;
     [SerializeField] private float moveSpeed;
-    [SerializeField] private LayerMask killer;
-    [SerializeField] private GameObject damagePoint;
-    private Animator anim;
-    private BoxCollider2D collider;
+    //[SerializeField] private LayerMask killer;
+    //[SerializeField] private GameObject damagePoint;
+    //private Animator anim;
+    //private BoxCollider2D collider;
     private Rigidbody2D enemy;
-    private GameObject objEnemy;
+    //private GameObject objEnemy;
 
     // Start is called before the first frame update
     void Start()
     {
-     enemy = GetComponent<Rigidbody2D>();   
-     collider = GetComponent<BoxCollider2D>();
-      anim = GetComponent<Animator>();
-      objEnemy = GetComponent<GameObject>();
+        enemy = GetComponent<Rigidbody2D>();   
+        //collider = GetComponent<BoxCollider2D>();
+        //anim = GetComponent<Animator>();
+        //objEnemy = GetComponent<GameObject>();
     }
 
     // Update is called once per frame
@@ -39,13 +39,13 @@ public class EnemyAgro : MonoBehaviour
             StopChasing();
         }
 
-        if(BeingKilled())
-        {
-            anim.SetBool("death", true);
-            Destroy(damagePoint);
-            Destroy(objEnemy);
+        // if(BeingKilled())
+        // {
+        //     anim.SetBool("death", true);
+        //     Destroy(damagePoint);
+        //     Destroy(objEnemy);
 
-        }
+        // }
         //Debug.Log(BeingKilled());
     }
 
@@ -70,8 +70,8 @@ public class EnemyAgro : MonoBehaviour
         enemy.velocity = new Vector2(0, 0);
     }
 
-    private bool BeingKilled()
-    {
-        return Physics2D.BoxCast(collider.bounds.center, collider.bounds.size , 0f, Vector2.up, .1f, killer);
-    }
+    // private bool BeingKilled()
+    // {
+    //     return Physics2D.BoxCast(collider.bounds.center, collider.bounds.size , 0f, Vector2.up, .1f, killer);
+    // }
 }

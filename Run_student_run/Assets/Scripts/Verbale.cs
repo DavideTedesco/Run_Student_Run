@@ -17,9 +17,17 @@ public class Verbale : MonoBehaviour
         
     }
 
+    public AudioSource verbale;
+
+    public void PlayVerbale()
+    {
+        verbale.Play();
+    }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
-           input.WinGame();
+        if (other.gameObject.CompareTag("Player")) {
+        PlayVerbale();
+        input.WinGame();
+    }
     }
 }
