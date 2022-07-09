@@ -80,3 +80,8 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows
 Run_student_run/Library/SourceAssetDB
 Run_student_run/Library/SourceAssetDB-lock
+Run_student_run/Library/ArtifactDB-lock
+Run_student_run/Library/SceneVisibilityState.asset
+Run_student_run/Library/ShaderCache.db
+Run_student_run/Library/SourceAssetDB
+Run_student_run/Library/SourceAssetDB-lock
