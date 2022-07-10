@@ -10,6 +10,7 @@ public class PendoEnemy : MonoBehaviour
     [SerializeField]float baseCastDistance; 
     string facingDirection; 
     Rigidbody2D rb;
+     private Animator anim;
     Vector3 baseScale;
     [SerializeField]float moveSpeed;
 
@@ -19,6 +20,18 @@ public class PendoEnemy : MonoBehaviour
         facingDirection = RIGHT;
         rb = GetComponent<Rigidbody2D>();
         baseScale = transform.localScale;
+    }
+
+    void update()
+    {
+        updateAnimationState();
+    }
+     private void updateAnimationState(){
+        
+        if(rb.velocity.x > 0 || rb.velocity.x < 0)
+        {
+             anim.SetBool("running", true);
+        }
     }
 
     // Update is called once per frame
