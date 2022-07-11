@@ -8,7 +8,9 @@
 
     public class PlayFabController : MonoBehaviour
     {
+    //=====================================================================LOGIN
 
+    #region Login
     [SerializeField] GameObject signUpTab, loginTab, startPanel, mainPage;
 
     public Text username, userEmail, userPassword, userEmailLogin, userPasswordLogin, errorSignUp, errorLogin;
@@ -75,7 +77,7 @@
         var request = new LoginWithEmailAddressRequest
         {
             Email = userEmailLogin.text,
-            Password = Encrypt(userPassword.text)
+            Password = Encrypt(userPasswordLogin.text),
         };
         PlayFabClientAPI.LoginWithEmailAddress(request, LoginSuccess, LoginError);
     }
@@ -97,8 +99,9 @@
         startPanel.SetActive(false);
         mainPage.SetActive(true);
     }
-    //===========================LEADERBOARD
 
+    #endregion Login
+    //===============================================================LEADERBOARD
 
     public int playerLevel;
     public int gameLevel;

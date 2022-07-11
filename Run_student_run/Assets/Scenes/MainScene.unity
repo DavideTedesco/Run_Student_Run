@@ -742,7 +742,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289964003}
+      - m_Target: {fileID: 1498846437}
         m_TargetAssemblyTypeName: PlayFabController, Assembly-CSharp
         m_MethodName: Login
         m_Mode: 1
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289964003}
+      - m_Target: {fileID: 1498846437}
         m_TargetAssemblyTypeName: PlayFabController, Assembly-CSharp
         m_MethodName: SignUp
         m_Mode: 1
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1498846437}
         m_TargetAssemblyTypeName: PlayFabController, Assembly-CSharp
         m_MethodName: GetLeaderBoard
         m_Mode: 1
@@ -1550,7 +1550,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayFabLogin, Assembly-CSharp
-        m_MethodName: GetUsername
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1636,7 +1636,7 @@ Transform:
   - {fileID: 1049587985}
   - {fileID: 968071716}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &626898657
 GameObject:
@@ -2535,7 +2535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &968071713
 GameObject:
@@ -2698,7 +2698,7 @@ RectTransform:
   - {fileID: 1143314679}
   - {fileID: 536351460}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3062,7 +3062,7 @@ Transform:
   - {fileID: 1761706138}
   - {fileID: 1382178780}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1164739928
 GameObject:
@@ -3314,7 +3314,6 @@ GameObject:
   - component: {fileID: 1289964002}
   - component: {fileID: 1289964001}
   - component: {fileID: 1289964000}
-  - component: {fileID: 1289964003}
   m_Layer: 5
   m_Name: StartPanel
   m_TagString: Untagged
@@ -3381,37 +3380,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1289964003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1289963999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41d41bcdcdc7f42cd87b237dfc5c7643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  signUpTab: {fileID: 2043998941}
-  loginTab: {fileID: 1695562601}
-  startPanel: {fileID: 1289963999}
-  mainPage: {fileID: 1146252096}
-  username: {fileID: 7509066}
-  userEmail: {fileID: 1330697297}
-  userPassword: {fileID: 737451456}
-  userEmailLogin: {fileID: 877949865}
-  userPasswordLogin: {fileID: 1982779280}
-  errorSignUp: {fileID: 1943238363}
-  errorLogin: {fileID: 1824872814}
-  playerLevel: 0
-  gameLevel: 0
-  playerHealth: 0
-  booksCounter: 0
-  playerHighScore: 0
-  leaderboardPanel: {fileID: 0}
-  listingPrefab: {fileID: 0}
-  listingContainer: {fileID: 0}
 --- !u!1 &1323700145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3902,7 +3870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1422579800
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4163,6 +4131,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07fcd52e02f0b64f906d20c82efb692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1498846436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498846438}
+  - component: {fileID: 1498846437}
+  m_Layer: 0
+  m_Name: PlayfabController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1498846437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498846436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d41bcdcdc7f42cd87b237dfc5c7643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signUpTab: {fileID: 2043998941}
+  loginTab: {fileID: 1695562601}
+  startPanel: {fileID: 1289963999}
+  mainPage: {fileID: 1146252096}
+  username: {fileID: 7509066}
+  userEmail: {fileID: 1330697297}
+  userPassword: {fileID: 737451456}
+  userEmailLogin: {fileID: 877949865}
+  userPasswordLogin: {fileID: 1982779280}
+  errorSignUp: {fileID: 1943238363}
+  errorLogin: {fileID: 1824872814}
+  playerLevel: 0
+  gameLevel: 0
+  playerHealth: 0
+  booksCounter: 0
+  playerHighScore: 0
+  leaderboardPanel: {fileID: 1034292429}
+  listingPrefab: {fileID: 4846406338501666138, guid: b4bfbde5f600b481bb5febe7386fd481, type: 3}
+  listingContainer: {fileID: 1393981650}
+--- !u!4 &1498846438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498846436}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519154115
 GameObject:
   m_ObjectHideFlags: 0
@@ -4556,7 +4586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602354990
 GameObject:
@@ -4713,7 +4743,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1498846437}
         m_TargetAssemblyTypeName: PlayFabController, Assembly-CSharp
         m_MethodName: CloseLeaderboardPanel
         m_Mode: 1
@@ -5206,7 +5236,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289964003}
+      - m_Target: {fileID: 1498846437}
         m_TargetAssemblyTypeName: PlayFabController, Assembly-CSharp
         m_MethodName: LoginTab
         m_Mode: 1
@@ -5970,7 +6000,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1289964003}
+      - m_Target: {fileID: 1498846437}
         m_TargetAssemblyTypeName: PlayFabController, Assembly-CSharp
         m_MethodName: SignUpTab
         m_Mode: 1
