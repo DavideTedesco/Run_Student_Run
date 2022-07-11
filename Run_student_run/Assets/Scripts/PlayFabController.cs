@@ -1,134 +1,104 @@
-using PlayFab;
-using PlayFab.ClientModels;
-//da commentare per build
-//using PlayFab.PfEditor.Json;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+    using PlayFab;
+    using PlayFab.ClientModels;
+    using System.Collections.Generic;
+    using System.Collections;
+    using UnityEngine;
+    using UnityEngine.UI;
+    using UnityEngine.SceneManagement;
 
-public class PlayFabController : MonoBehaviour
-{
-    public static PlayFabController PFC;
-
-    private string userEmail;
-    private string userPassword;
-    private string username;
-    public GameObject loginPanel, mainPage, loginPage;
-
-    private void OnEnable()
+    public class PlayFabController : MonoBehaviour
     {
-        if (PlayFabController.PFC == null)
-            PlayFabController.PFC = this;
-        else
-        {
-            if(PlayFabController.PFC != this)
-            {
-                Destroy(this.gameObject);
-            }
-        }
-        DontDestroyOnLoad(this.gameObject);
+
+    [SerializeField] GameObject signUpTab, loginTab, startPanel, mainPage;
+
+    public Text username, userEmail, userPassword, userEmailLogin, userPasswordLogin, errorSignUp, errorLogin;
+
+    string encryptedPassword;
+
+    public void SignUpTab() {
+        signUpTab.SetActive(true);
+        loginTab.SetActive(false);
+        errorSignUp.text = "";
+        errorLogin.text = "";
 
     }
-    //testing username: pippo32
-    //testing pass: pippoPluto32
-    //testing email: davide_hrd(at)hotmail.it
 
-    public void Start()
+    public void LoginTab()
     {
-
-        //Note: Setting title Id here can be skipped if you have set the value in Editor Extensions already.
-        if (string.IsNullOrEmpty(PlayFabSettings.TitleId))
-        {
-            PlayFabSettings.TitleId = "6487C"; // Please change this value to your own titleId from PlayFab Game Manager
-        }
-        var request = new LoginWithCustomIDRequest { CustomId = "LoginRequest", CreateAccount = true };
-        //var requestWithoutPrefs = new LoginWithEmailAddressRequest { Email = userEmail, Password = userPassword };
-        //PlayFabClientAPI.LoginWithEmailAddress(requestWithoutPrefs, OnLoginSuccess, OnLoginFailure);
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
-        //Commentare l'if qui sotto per effettuare il login senza prefs
-        /*if (PlayerPrefs.HasKey("EMAIL"))
-        {
-            userEmail = PlayerPrefs.GetString("EMAIL");
-            userPassword = PlayerPrefs.GetString("PASSWORD");
-            var requestWithPrefs = new LoginWithEmailAddressRequest { Email = userEmail, Password = userPassword };
-            PlayFabClientAPI.LoginWithEmailAddress(requestWithPrefs, OnLoginSuccess, OnLoginFailure);
-        }
-        //ANONYMOUS LOGIN
-        //TODO*/
+        signUpTab.SetActive(false);
+        loginTab.SetActive(true);
+        errorSignUp.text = "";
+        errorLogin.text = "";
     }
 
-    public void StartGame()
+    string Encrypt(string pass)
     {
-        loginPage.SetActive(true);
-        mainPage.SetActive(false);
+        System.Security.Cryptography.MD5CryptoServiceProvider x = new System.Security.Cryptography.MD5CryptoServiceProvider();
+        byte[] bs = System.Text.Encoding.UTF8.GetBytes(pass);
+        bs = x.ComputeHash(bs);
+        System.Text.StringBuilder s = new System.Text.StringBuilder();
+        foreach(byte b in bs)
+        {
+            s.Append(b.ToString("x2").ToLower());
+        }
+
+        return s.ToString();
     }
 
-    #region Login
-    private void OnLoginSuccess(LoginResult result)
+    public void SignUp()
     {
-        Debug.Log("Congratulations, you made your first successful API call!");
-        PlayerPrefs.SetString("EMAIL", userEmail);
-        PlayerPrefs.SetString("PASSWORD", userPassword);
-        //loginPanel.SetActive(false);
-        //SceneManager.LoadScene("MainScene");
-        loginPage.SetActive(false);
+        var registerRequest = new RegisterPlayFabUserRequest
+        {
+            Email = userEmail.text,
+            Password = Encrypt(userPassword.text),
+            Username = username.text
+        };
+
+        PlayFabClientAPI.RegisterPlayFabUser(registerRequest, RegisterSuccess, RegisterError);
+    }
+
+    public void RegisterSuccess(RegisterPlayFabUserResult result)
+    {
+        errorSignUp.text = "";
+        errorLogin.text = "";
+        StartGame();
+    }
+
+    public void RegisterError(PlayFabError error)
+    {
+        errorSignUp.text = error.GenerateErrorReport();
+
+    }
+
+    public void Login()
+    {
+        var request = new LoginWithEmailAddressRequest
+        {
+            Email = userEmailLogin.text,
+            Password = Encrypt(userPassword.text)
+        };
+        PlayFabClientAPI.LoginWithEmailAddress(request, LoginSuccess, LoginError);
+    }
+
+    public void LoginSuccess(LoginResult result)
+    {
+        errorSignUp.text = "";
+        errorLogin.text = "";
+        StartGame();
+    }
+
+    public void LoginError(PlayFabError error)
+    {
+        errorLogin.text = error.GenerateErrorReport();
+    }
+
+    void StartGame()
+    {
+        startPanel.SetActive(false);
         mainPage.SetActive(true);
-        GetStats();
-
     }
+    //===========================LEADERBOARD
 
-    private void OnRegisterSuccess(RegisterPlayFabUserResult result)
-    {
-        Debug.Log("Congratulations, you made your first successful API call!");
-        PlayerPrefs.SetString("EMAIL", userEmail);
-        PlayerPrefs.SetString("PASSWORD", userPassword);
-        PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest { DisplayName = username},OnDisplayName, OnLoginFailure );
-        //loginPanel.SetActive(false);
-        //SceneManager.LoadScene("MainScene");
-        GetStats();
-        loginPage.SetActive(false);
-        mainPage.SetActive(true);
-
-    }
-
-    void OnDisplayName(UpdateUserTitleDisplayNameResult result)
-    {
-        Debug.Log(result.DisplayName + " is your new display name!");
-        }
-
-    private void OnLoginFailure(PlayFabError error)
-    {
-        var registerRequest = new RegisterPlayFabUserRequest { Email = userEmail, Password = userPassword, Username = username};
-        PlayFabClientAPI.RegisterPlayFabUser(registerRequest, OnRegisterSuccess, OnRegisterFailure);
-    }
-
-    private void OnRegisterFailure(PlayFabError error)
-    {
-        Debug.Log(error.GenerateErrorReport());
-    }
-
-    public void GetUserEmail(string emailIn)
-    {
-        userEmail = emailIn;
-
-    }
-
-    public void GetUserPassword(string passwordIn)
-    {
-        userPassword = passwordIn;
-    }
-
-    public void GetUsername(string usernameIn)
-    {
-        username = usernameIn;
-    }
-
-    public void onClickLogin()
-    {
-        var request = new LoginWithEmailAddressRequest { Email = userEmail, Password = userPassword };
-        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginFailure);
-    }
-
-    #endregion Login
 
     public int playerLevel;
     public int gameLevel;
@@ -157,114 +127,115 @@ result => { Debug.Log("User statistics updated"); },
 error => { Debug.LogError(error.GenerateErrorReport()); });
     }
 
-void GetStats()
-{
-    PlayFabClientAPI.GetPlayerStatistics(
-        new GetPlayerStatisticsRequest(),
-        OnGetStats,
-        error => Debug.LogError(error.GenerateErrorReport())
-    );
-}
-
-void OnGetStats(GetPlayerStatisticsResult result)
-{
-    Debug.Log("Received the following Statistics:");
-    foreach (var eachStat in result.Statistics)
+    void GetStats()
     {
-        Debug.Log("Statistic (" + eachStat.StatisticName + "): " + eachStat.Value);
-        switch (eachStat.StatisticName)
+        PlayFabClientAPI.GetPlayerStatistics(
+            new GetPlayerStatisticsRequest(),
+            OnGetStats,
+            error => Debug.LogError(error.GenerateErrorReport())
+        );
+    }
+
+    void OnGetStats(GetPlayerStatisticsResult result)
+    {
+        Debug.Log("Received the following Statistics:");
+        foreach (var eachStat in result.Statistics)
         {
-            case "PlayerLevel":
-                playerLevel = eachStat.Value;
-                break;
-            case "GameLevel":
-                gameLevel = eachStat.Value;
-                break;
-            case "PlayerHealth":
-                playerHealth = eachStat.Value;
-                break;
-            case "BooksCounter":
-                booksCounter = eachStat.Value;
-                break;
-            case "PlayerHighScore":
-                            playerHighScore = eachStat.Value;
-                            break;
+            Debug.Log("Statistic (" + eachStat.StatisticName + "): " + eachStat.Value);
+            switch (eachStat.StatisticName)
+            {
+                case "PlayerLevel":
+                    playerLevel = eachStat.Value;
+                    break;
+                case "GameLevel":
+                    gameLevel = eachStat.Value;
+                    break;
+                case "PlayerHealth":
+                    playerHealth = eachStat.Value;
+                    break;
+                case "BooksCounter":
+                    booksCounter = eachStat.Value;
+                    break;
+                case "PlayerHighScore":
+                    playerHighScore = eachStat.Value;
+                    break;
+            }
         }
     }
-}
 
-// Build the request object and access the API
-public  void StartCloudUpdatePlayerStats()
-{
-PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
-{
-FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
-FunctionParameter = new { PlayerLevel = playerLevel, GameLevel = gameLevel, PlayerHealth = playerHealth, BooksCounter = booksCounter, PlayerHighScore = playerHighScore}, // The parameter provided to your function
-GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
-}, OnCloudUpdateStats, OnErrorShared);
-}
-// OnCloudHelloWorld defined in the next code block
+    // Build the request object and access the API
+    public void StartCloudUpdatePlayerStats()
+    {
+        PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
+        {
+            FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
+            FunctionParameter = new { PlayerLevel = playerLevel, GameLevel = gameLevel, PlayerHealth = playerHealth, BooksCounter = booksCounter, PlayerHighScore = playerHighScore }, // The parameter provided to your function
+            GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
+        }, OnCloudUpdateStats, OnErrorShared);
+    }
+    // OnCloudHelloWorld defined in the next code block
 
-private static void OnCloudUpdateStats(ExecuteCloudScriptResult result)
-{
-// CloudScript (Legacy) returns arbitrary results, so you have to evaluate them one step and one parameter at a time
+    private static void OnCloudUpdateStats(ExecuteCloudScriptResult result)
+    {
+        // CloudScript (Legacy) returns arbitrary results, so you have to evaluate them one step and one parameter at a time
 
-//da commentare per build TODO
-//Debug.Log(JsonWrapper.SerializeObject(result.FunctionResult));
+        //da commentare per build TODO
+        //Debug.Log(JsonWrapper.SerializeObject(result.FunctionResult));
 
-//JsonObject jsonResult = (JsonObject)result.FunctionResult;
-//object messageValue;
-//jsonResult.TryGetValue("messageValue", out messageValue); // note how "messageValue" directly corresponds to the JSON values set in CloudScript (Legacy)
-//Debug.Log((string)messageValue);
-}
+        //JsonObject jsonResult = (JsonObject)result.FunctionResult;
+        //object messageValue;
+        //jsonResult.TryGetValue("messageValue", out messageValue); // note how "messageValue" directly corresponds to the JSON values set in CloudScript (Legacy)
+        //Debug.Log((string)messageValue);
+    }
 
-private static void OnErrorShared(PlayFabError error)
-{
-Debug.Log(error.GenerateErrorReport());
-}
-#endregion PlayerStats
+    private static void OnErrorShared(PlayFabError error)
+    {
+        Debug.Log(error.GenerateErrorReport());
+    }
+    #endregion PlayerStats
 
-public GameObject leaderboardPanel;
-public GameObject listingPrefab;
-public Transform listingContainer;
+    public GameObject leaderboardPanel;
+    public GameObject listingPrefab;
+    public Transform listingContainer;
 
-#region LeaderBoard
-public void GetLeaderBoard()
-{
-var requestLeaderBoard = new GetLeaderboardRequest { StartPosition = 0, StatisticName = "PlayerHighScore", MaxResultsCount = 20};
-PlayFabClientAPI.GetLeaderboard(requestLeaderBoard, OnGetLeaderBoard, OnErrorLeaderBoard );
-}
+    #region LeaderBoard
+    public void GetLeaderBoard()
+    {
+        var requestLeaderBoard = new GetLeaderboardRequest { StartPosition = 0, StatisticName = "PlayerHighScore", MaxResultsCount = 20 };
+        PlayFabClientAPI.GetLeaderboard(requestLeaderBoard, OnGetLeaderBoard, OnErrorLeaderBoard);
+    }
 
-public void OnGetLeaderBoard(GetLeaderboardResult result)
-{
-leaderboardPanel.SetActive(true);
-mainPage.SetActive(false);
-//Debug.Log(result.Leaderboard[0].StatValue);
-foreach (PlayerLeaderboardEntry player in result.Leaderboard)
-{
-GameObject tempListing = Instantiate(listingPrefab, listingContainer);
-LeaderboardListing LL = tempListing.GetComponent<LeaderboardListing>();
-LL.playerNameText.text = player.DisplayName;
-LL.playerScoreText.text = player.StatValue.ToString();
-Debug.Log(player.DisplayName + ": " + player.StatValue);
-}
+    public void OnGetLeaderBoard(GetLeaderboardResult result)
+    {
+        leaderboardPanel.SetActive(true);
+        mainPage.SetActive(false);
+        //Debug.Log(result.Leaderboard[0].StatValue);
+        foreach (PlayerLeaderboardEntry player in result.Leaderboard)
+        {
+            GameObject tempListing = Instantiate(listingPrefab, listingContainer);
+            LeaderboardListing LL = tempListing.GetComponent<LeaderboardListing>();
+            LL.playerNameText.text = player.DisplayName;
+            LL.playerScoreText.text = player.StatValue.ToString();
+            Debug.Log(player.DisplayName + ": " + player.StatValue);
+        }
 
-}
+    }
 
-public void CloseLeaderboardPanel()
-{
+    public void CloseLeaderboardPanel()
+    {
 
-leaderboardPanel.SetActive(false);
-mainPage.SetActive(true);
+        leaderboardPanel.SetActive(false);
+        mainPage.SetActive(true);
 
-for (int i = listingContainer.childCount - 1; i>=0; i--)
-{
-Destroy(listingContainer.GetChild(i).gameObject);
-}
-}
-public void OnErrorLeaderBoard(PlayFabError error)
-{
-Debug.LogError(error.GenerateErrorReport());
-}
-#endregion LeaderBoard
+        for (int i = listingContainer.childCount - 1; i >= 0; i--)
+        {
+            Destroy(listingContainer.GetChild(i).gameObject);
+        }
+    }
+    public void OnErrorLeaderBoard(PlayFabError error)
+    {
+        Debug.LogError(error.GenerateErrorReport());
+    }
+    #endregion LeaderBoard
+
 }
