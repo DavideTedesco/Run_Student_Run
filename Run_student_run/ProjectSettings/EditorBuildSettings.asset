@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SecondYear.unity
     guid: 55144972a4015714da51512500080c3e
   - enabled: 1
-    path: Assets/Scenes/ThirdYear.unity
+    path: Assets/Scenes/Not_Used_Levels/ThirdYear.unity
     guid: 636ece15b3a5c7d4690ce7b1f4ad20b8
   - enabled: 1
     path: Assets/Scenes/Authors.unity
@@ -75,19 +75,19 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/3.1 Level.unity
+    path: Assets/Scenes/Not_Used_Levels/3.1 Level.unity
     guid: 35d7a30e92495e74ea0276f63eae09a0
   - enabled: 1
-    path: Assets/Scenes/3.2 Level.unity
+    path: Assets/Scenes/Not_Used_Levels/3.2 Level.unity
     guid: 617440ec694d66c45b2e723b1a3ab863
   - enabled: 1
-    path: Assets/Scenes/3.3 Level.unity
+    path: Assets/Scenes/Not_Used_Levels/3.3 Level.unity
     guid: 83e3e51c33920c148b2b61035abbbbfd
   - enabled: 1
-    path: Assets/Scenes/3.4 Level.unity
+    path: Assets/Scenes/Not_Used_Levels/3.4 Level.unity
     guid: 81b50c5261472fd45acf25746342e602
   - enabled: 1
-    path: Assets/Scenes/3.5 Level.unity
+    path: Assets/Scenes/Not_Used_Levels/3.5 Level.unity
     guid: c01143d7a66925d4d94641ac5f0071d2
   - enabled: 0
     path: 
