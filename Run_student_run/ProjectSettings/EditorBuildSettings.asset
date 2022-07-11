@@ -113,4 +113,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalExam.unity
     guid: ab0183705a77646779a06ab7bbe95fb4
+  - enabled: 1
+    path: Assets/Scenes/Welcome.unity
+    guid: bdfd37aba7d0d4a7888f92bb25e69194
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
