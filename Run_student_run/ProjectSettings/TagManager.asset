@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Books
+  - Verbale
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: sky
+    uniqueID: 2640094349
+    locked: 0
+  - name: Base background
+    uniqueID: 274963829
+    locked: 0
+  - name: Background 3
+    uniqueID: 927669259
+    locked: 0
+  - name: Background 2
+    uniqueID: 3093879317
+    locked: 0
+  - name: Background 1
+    uniqueID: 1447119585
+    locked: 0
+  - name: Underground
+    uniqueID: 1828250949
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: terrain
+    uniqueID: 2458534343
+    locked: 0
+  - name: environement
+    uniqueID: 3974509127
+    locked: 0
