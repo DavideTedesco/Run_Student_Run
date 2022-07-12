@@ -8,6 +8,7 @@ public class DamageLogic : MonoBehaviour
     [SerializeField] private LayerMask killer;
     [SerializeField] private GameObject damagePoint;
     [SerializeField] private GameObject castPos;
+    [SerializeField] private GameObject enemy;
     private GameObject objEnemy;
      private BoxCollider2D collider;
     private Animator anim;
@@ -24,11 +25,15 @@ public class DamageLogic : MonoBehaviour
     {
         if(BeingKilled())
         {
-            anim.SetBool("death", true);
+            anim.SetTrigger("death");
             Destroy(damagePoint);
-            Destroy(objEnemy);
-            Destroy(castPos);
+            //Destroy(objEnemy);
+            //Destroy(castPos);
         }
+    }
+    void DestroyEnemy()
+    {
+        Destroy(enemy);
     }
 
     private bool BeingKilled()
