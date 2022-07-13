@@ -126,4 +126,9 @@ public class PendoEnemy : MonoBehaviour
 
         return val;
     }
+
+    public void die()
+    {
+        rb.bodyType = RigidbodyType2D.Static;
+    }
 }
