@@ -12,6 +12,7 @@ public class PlayerMobileInput : MonoBehaviour
     //private PolygonCollider2D coll;
     private BoxCollider2D coll;
     [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private GameObject player;
     private Joystick joystick;
     private Animator anim; 
     private SpriteRenderer sprite;
@@ -187,6 +188,11 @@ public class PlayerMobileInput : MonoBehaviour
     public void backToIdle()
     {
          anim.SetTrigger("idle");
+    }
+
+    public void die()
+    {
+        rb.bodyType = RigidbodyType2D.Static;
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////

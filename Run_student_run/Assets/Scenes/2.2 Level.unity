@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &4917163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1932191728}
         m_TargetAssemblyTypeName: PlayerMobileInput, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
@@ -946,7 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &101071267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1215,7 +1215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &122237305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1769,7 +1769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &170364158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1913,7 +1913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &180476999
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2420,7 +2420,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1932191728}
         m_TargetAssemblyTypeName: PlayerMobileInput, Assembly-CSharp
         m_MethodName: GoToLevel
         m_Mode: 1
@@ -2672,7 +2672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &290222636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3499,7 +3499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &430498308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4175,7 +4175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &511177257
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5091,7 +5091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &645845076
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5306,7 +5306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &653302144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5485,7 +5485,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1932191728}
         m_TargetAssemblyTypeName: PlayerMobileInput, Assembly-CSharp
         m_MethodName: GoToMenu
         m_Mode: 1
@@ -5661,7 +5661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &699860765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5883,7 +5883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &722487330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6825,7 +6825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &842154299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6969,7 +6969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &869449724
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7113,7 +7113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &884338593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7257,7 +7257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &884628548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7711,7 +7711,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1932191728}
         m_TargetAssemblyTypeName: PlayerMobileInput, Assembly-CSharp
         m_MethodName: GoToMenu
         m_Mode: 1
@@ -8233,7 +8233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1030898115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8308,7 +8308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1037285637
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8805,7 +8805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1070083010
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9261,7 +9261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1178353623
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124435,7 +124435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1363668741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124856,7 +124856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1453660110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125493,7 +125493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1526041299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125762,7 +125762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1557541275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126031,7 +126031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1591770997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126550,7 +126550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1690150992
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127045,7 +127045,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1932191728}
         m_TargetAssemblyTypeName: PlayerMobileInput, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -127568,7 +127568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1824688431
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128087,7 +128087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &1875537814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128379,7 +128379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
-  gameOverScreen: {fileID: 0}
+  gameOverScreen: {fileID: 245877792}
 --- !u!95 &1932191727
 Animator:
   serializedVersion: 3
@@ -129829,7 +129829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &2041771457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129973,7 +129973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &2044313072
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130565,7 +130565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &2078828409
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130740,7 +130740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 1482747297}
 --- !u!61 &2102464358
 BoxCollider2D:
   m_ObjectHideFlags: 0
