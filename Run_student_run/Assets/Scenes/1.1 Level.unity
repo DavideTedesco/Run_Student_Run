@@ -1816,7 +1816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66.84894, y: 28.942993}
+  m_AnchoredPosition: {x: -26, y: 21}
   m_SizeDelta: {x: 163.1245, y: 40.532}
   m_Pivot: {x: 0.5, y: 0.50000036}
 --- !u!114 &255762500
@@ -114399,8 +114399,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620842695}
-        m_TargetAssemblyTypeName: PlayerMobileInput, Assembly-CSharp
+      - m_Target: {fileID: 480316040}
+        m_TargetAssemblyTypeName: FirstYearButton, Assembly-CSharp
         m_MethodName: GoToFirstSecondLv
         m_Mode: 1
         m_Arguments:
@@ -117780,7 +117780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1604882805
 RectTransform:
   m_ObjectHideFlags: 0
