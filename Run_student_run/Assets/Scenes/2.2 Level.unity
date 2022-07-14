@@ -1670,7 +1670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 1
-  heart: {fileID: 0}
+  heart: {fileID: 1394181182}
 --- !u!212 &152576716
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9085,8 +9085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63398ef0bd9c028a2897c8686f255464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 0}
-  verbale: {fileID: 0}
+  input: {fileID: 1932191728}
+  verbale: {fileID: 1980416901}
 --- !u!95 &1134136300
 Animator:
   serializedVersion: 3
