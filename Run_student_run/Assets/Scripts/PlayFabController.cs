@@ -97,6 +97,17 @@
 
     void StartGame()
     {
+        //DontDestroyOnLoad(this.signUpTab);
+        //DontDestroyOnLoad(this.loginTab);
+        //DontDestroyOnLoad(this.startPanel);
+        //DontDestroyOnLoad(this.mainPage);
+        //DontDestroyOnLoad(this.username);
+        //DontDestroyOnLoad(this.userEmail);
+        //DontDestroyOnLoad(this.userEmailLogin);
+        //DontDestroyOnLoad(this.userPasswordLogin);
+        //DontDestroyOnLoad(this.leaderboardPanel);
+        //DontDestroyOnLoad(this.listingContainer);
+        //DontDestroyOnLoad(this.gameObject);
         startPanel.SetActive(false);
         mainPage.SetActive(true);
     }
