@@ -53,7 +53,8 @@
         {
             Email = userEmail.text,
             Password = Encrypt(userPassword.text),
-            Username = username.text
+            Username = username.text,
+            DisplayName = username.text
         };
 
         PlayFabClientAPI.RegisterPlayFabUser(registerRequest, RegisterSuccess, RegisterError);
