@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &110872829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &140338168
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1316,7 +1316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &225482964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2042,7 +2042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &299624730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2268,7 +2268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &304727320
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2412,7 +2412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &305343020
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2973,7 +2973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &354534750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3207,7 +3207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &373983269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3356,7 +3356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &428318336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3978,7 +3978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &549428269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4204,7 +4204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &573335066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4480,7 +4480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &582806231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -111703,7 +111703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &727972310
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -112365,7 +112365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &903259332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -112591,7 +112591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &912358827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113044,7 +113044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1047000793
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113188,7 +113188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1062151758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113703,7 +113703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1130755264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -114101,7 +114101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1166829648
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115939,7 +115939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1395073906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -116801,7 +116801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1491463585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -117195,7 +117195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1542677360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -117894,6 +117894,7 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
+  player: {fileID: 0}
   pauseMenuPanel: {fileID: 822816206}
   fixedJoystick: {fileID: 423984881}
   winPanel: {fileID: 1604882804}
@@ -118175,7 +118176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1641015262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118497,7 +118498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1703691048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -119186,7 +119187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1858326145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -119412,7 +119413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &1920856678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -120703,7 +120704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &2112137357
 BoxCollider2D:
   m_ObjectHideFlags: 0
