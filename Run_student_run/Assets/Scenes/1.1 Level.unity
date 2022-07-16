@@ -120119,7 +120119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookValue: 1
-  book: {fileID: 0}
+  book: {fileID: 713100970}
 --- !u!61 &2070238913
 BoxCollider2D:
   m_ObjectHideFlags: 0
