@@ -12,7 +12,7 @@ The app has been developed in Unity using Microsoft Playfab online services for 
 
 ## Screencast URL: ONLY PERMANENT URLs! NO PASSWORDS! So NO WeTransfer or similar services
 
-https://shorturl.at/bmxY7
+https://www.davidetedesco.it/vault/index.php/s/obqS3MqqrnZqccA
 
 ## Repository URL
 
