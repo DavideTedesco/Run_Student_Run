@@ -12,7 +12,7 @@ The app has been developed in Unity using Microsoft Playfab online services for 
 
 ## Screencast URL: ONLY PERMANENT URLs! NO PASSWORDS! So NO WeTransfer or similar services
 
-shorturl.at/bmxY7
+https://shorturl.at/bmxY7
 
 ## Repository URL
 
